@@ -73,7 +73,8 @@ const ListView = () => {
         <div style={{
                 backgroundImage: `url(${image})`,
                 backgroundSize: 'cover',
-                backgroundAttachment: 'fixed'
+                backgroundAttachment: 'fixed',
+                minHeight: '100vh'
             }} 
             className='pt-[5vh]'
             >
