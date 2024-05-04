@@ -69,14 +69,11 @@ const ListView = () => {
 
 
     return (
-        <div
-          style={{
-                top: 0,
+        
+        <div style={{
                 backgroundImage: `url(${image})`,
                 backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                width: '100vw',
-                height: '100vh',
+                backgroundAttachment: 'fixed'
             }} 
             className='pt-[5vh]'
             >
