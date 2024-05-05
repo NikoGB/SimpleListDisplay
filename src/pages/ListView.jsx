@@ -36,20 +36,22 @@ const ListView = () => {
         channel.addEventListener('message', handleUpdate);
 
 
+        
         const interval = setInterval(() => {
             if (containerRef.current) {
                 const containerWidth = containerRef.current.offsetWidth;
                 const textWidth = containerRef.current.firstChild.offsetWidth;
 
                 setPosition(prevPosition => {
-                    if (prevPosition > containerWidth) {
-                        return -textWidth;
+                    if (prevPosition + textWidth < 0) {
+                        return containerWidth;
                     } else {
-                        return prevPosition + 1;
+                        return prevPosition - 1;
                     }
                 });
             }
         }, 1);
+
 
 
         const handleScroll = () => {
