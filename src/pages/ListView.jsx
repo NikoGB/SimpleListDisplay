@@ -73,6 +73,7 @@ const ListView = () => {
     return (
         
         <div style={{
+                transform: scaleX(-1), //changed to mirrored
                 backgroundImage: `url(${image})`,
                 backgroundSize: 'cover',
                 backgroundAttachment: 'fixed',
